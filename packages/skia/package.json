@@ -16,7 +16,7 @@
       "android-arm64-v8a": "c310bd5261de1ab5f4afdb05aa51bf0f56d625f6285617e149af517a2d375e52",
       "android-x86": "26a18ade07de8318be2ec82bd82a1d7f2709893462229d70f0d353c6c8691cc3",
       "android-x86_64": "46a5576b6f8e7d1372c27576ad750384c2d6f892bfe3fc0ee260c68d08ebd844",
-      "apple-xcframeworks": "343fad71c01e1f8331d4421c7efe0ae6dff3a7d25361c466dcda7dc3737cdd5c"
+      "apple-xcframeworks": "e9dfedfc6c65a68ddd8d84b2b4d1231fb3898c243b16125f4232ee47aecd788f"
     }
   },
   "skia-graphite": {
