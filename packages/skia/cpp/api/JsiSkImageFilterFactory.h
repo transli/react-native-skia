@@ -245,9 +245,9 @@ public:
   JSI_HOST_FUNCTION(MakeRuntimeShader) {
     auto rtb = JsiSkRuntimeShaderBuilder::fromValue(runtime, arguments[0]);
 
-    const char *childName = "";
+    std::string childName = "";
     if (hasOptionalArgument(arguments, count, 1)) {
-      childName = arguments[1].asString(runtime).utf8(runtime).c_str();
+      childName = arguments[1].asString(runtime).utf8(runtime);
     }
 
     sk_sp<SkImageFilter> input = nullptr;
@@ -256,7 +256,7 @@ public:
     }
     auto filter = std::make_shared<JsiSkImageFilter>(
         getContext(),
-        SkImageFilters::RuntimeShader(*rtb, childName, std::move(input)));
+        SkImageFilters::RuntimeShader(*rtb, childName.c_str(), std::move(input)));
     return JSI_CREATE_HOST_OBJECT_WITH_MEMORY_PRESSURE(runtime, filter,
                                                        getContext());
   }
